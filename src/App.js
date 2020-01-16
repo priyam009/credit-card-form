@@ -1,13 +1,18 @@
 import React from "react";
 import "./App.css";
+import Wrapper from "./components/Wrapper";
+import { CardDiv, CardImage } from "./components/Card";
+import { FormDiv } from "./components/Form";
 
 class App extends React.Component {
   render() {
     return (
-      <div className="background">
-        <div className="card common"></div>
-        <div className="form common"></div>
-      </div>
+      <Wrapper>
+        <CardDiv>
+          <CardImage />
+        </CardDiv>
+        <FormDiv/>
+      </Wrapper>
     );
   }
 }
