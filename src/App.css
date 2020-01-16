@@ -26,3 +26,8 @@
   position: absolute;
   transform: translate(-50%, 0);;
 }
+
+.card-image {
+  border-radius: 10px;
+  width: 100%;
+}
