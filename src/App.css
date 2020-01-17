@@ -30,3 +30,22 @@
   border-radius: 10px;
   width: 100%;
 }
+
+.form-data {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.form-data-label-block {
+  display: block;
+}
+
+.form-data label input {
+  display: block;
+}
+
+.form-data-div-inline {
+ display: flex; 
+}
