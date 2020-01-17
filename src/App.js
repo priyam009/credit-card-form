@@ -11,7 +11,9 @@ class App extends React.Component {
         <CardDiv>
           <CardImage />
         </CardDiv>
-        <FormDiv/>
+        <FormDiv>
+          <FormData />
+        </FormDiv>
       </Wrapper>
     );
   }
