@@ -20,7 +20,14 @@ class App extends React.Component {
           <CardImage />
         </CardDiv>
         <FormDiv>
-          <FormData />
+          <FormData>
+            <CardName />
+            <CardNumber />
+            <FormInline>
+              <ExpiryDate />
+              <CVV />
+            </FormInline>
+          </FormData>
         </FormDiv>
       </Wrapper>
     );
