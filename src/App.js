@@ -21,14 +21,30 @@ import {
 } from "./components/Form";
 
 class App extends React.Component {
+  state = {
+    front: true
+  };
+
+  handleClick = () => {
+    this.setState({
+      front: !this.state.front
+    })
+  }
+
   render() {
     return (
       <Wrapper>
-        <CardDiv>
+        <CardDiv handleClick={this.handleClick}>
           <CardImage />
-          <CardNumber />
-          <CardName />
-          <CardExpiry />
+          {this.state.front ? (
+            <CardFront>
+              <CardNumber />
+              <CardName />
+              <CardExpiry />
+            </CardFront>
+          ) : (
+            <CardRear />
+          )}
         </CardDiv>
         <FormDiv>
           <FormData>
