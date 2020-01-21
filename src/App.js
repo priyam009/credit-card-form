@@ -4,9 +4,11 @@ import Wrapper from "./components/Wrapper";
 import {
   CardDiv,
   CardImage,
+  CardFront,
   CardNumber,
   CardName,
-  CardExpiry
+  CardExpiry,
+  CardRear
 } from "./components/Card";
 import {
   FormDiv,
