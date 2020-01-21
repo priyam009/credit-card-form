@@ -24,11 +24,14 @@ class App extends React.Component {
       <Wrapper>
         <CardDiv>
           <CardImage />
+          <CardNumber />
+          <CardName />
+          <CardExpiry />
         </CardDiv>
         <FormDiv>
           <FormData>
-            <CardName />
-            <CardNumber />
+            <FormCardName />
+            <FormCardNumber />
             <FormInline>
               <ExpiryDate />
               <CVV />
