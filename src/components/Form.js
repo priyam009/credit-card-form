@@ -9,7 +9,7 @@ export function FormData(props) {
   return <form className="form-data">{props.children}</form>;
 }
 
-export function CardNumber(props) {
+export function FormCardNumber(props) {
   return (
     <label className="form-data-label-block">
       Card Number
@@ -22,7 +22,7 @@ export function CardNumber(props) {
   );
 }
 
-export function CardName(props) {
+export function FormCardName(props) {
   return (
     <label className="form-data-label-block">
       Card Name
