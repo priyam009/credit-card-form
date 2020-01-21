@@ -10,6 +10,7 @@
   width: 400px;
   top: 10%;
   z-index: 1;
+  position: relative;
 }
 
 .form {
@@ -62,4 +63,32 @@
 
 .form-expiry {
   display: flex;
+}
+
+.cardnumber {
+  top: 50%;
+  width: 100%;
+  font-size: 25px;
+  left: 50%;
+}
+
+.cardname {
+  left: 20%;
+  top: 100%;
+  font-size: 18px;
+}
+
+.expirydate {
+  right: 0;
+  top: 100%;
+  font-size: 18px;
+}
+
+.common-card {
+  color: #121212;
+  transform: translate(-50%, 0);
+  position: absolute;
+  color: #fff;
+  text-shadow: 2px 2px 2px #121212;
+  text-align: center;
 }
