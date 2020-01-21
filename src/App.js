@@ -1,12 +1,18 @@
 import React from "react";
 import "./App.css";
 import Wrapper from "./components/Wrapper";
-import { CardDiv, CardImage } from "./components/Card";
+import {
+  CardDiv,
+  CardImage,
+  CardNumber,
+  CardName,
+  CardExpiry
+} from "./components/Card";
 import {
   FormDiv,
   FormData,
-  CardName,
-  CardNumber,
+  FormCardName,
+  FormCardNumber,
   FormInline,
   ExpiryDate,
   CVV
