@@ -9,7 +9,8 @@ import {
   CardNumber,
   CardName,
   CardExpiry,
-  CardRear
+  CardRear,
+  CardSign
 } from "./components/Card";
 import {
   FormDiv,
@@ -23,28 +24,45 @@ import {
 
 class App extends React.Component {
   state = {
-    front: true
+    showFront: true,
+    showRear: false
   };
 
   handleClick = () => {
     this.setState({
-      front: !this.state.front
-    })
-  }
+      showRear: !this.state.showRear,
+      showFront: !this.state.showFront
+    });
+  };
 
   render() {
     return (
       <Wrapper>
-        <CardDiv handleClick={this.handleClick}>
-          <CardImage />
-          {this.state.front ? (
-            <CardFront>
+        <CardDiv>
+          {/* CSS Transition */}
+          <CSSTransition
+            in={this.state.showRear}
+            timeout={2000}
+            classNames="flip"
+          >
+            {/* Credit Card Background Image */}
+            <CardImage handleClick={this.handleClick} />
+          </CSSTransition>
+
+          {/* Credit Card Front */}
+          {this.state.showFront && (
+            <CardFront className="delay">
               <CardNumber />
               <CardName />
               <CardExpiry />
             </CardFront>
-          ) : (
-            <CardRear />
+          )}
+
+          {/* Credit Card Rear */}
+          {this.state.showRear && (
+            <CardRear className="delay">
+              <CardSign />
+            </CardRear>
           )}
         </CardDiv>
         <FormDiv>

@@ -1,13 +1,13 @@
 import React from "react";
 import "../App.css";
-import credit from "../credit-background.jpg";
+import creditImg from "../credit-background.jpg";
 
 export function CardDiv(props) {
-  return <div className="card common" onClick={() => props.handleClick()}>{props.children}</div>;
+  return <div className="card common">{props.children}</div>;
 }
 
 export function CardImage(props) {
-  return <img className="card-image" alt="sample" src={credit}></img>;
+  return <img className="card-image" alt="sample" src={creditImg} onClick={() => props.handleClick()}></img>;
 }
 
 export function CardFront(props) {
@@ -37,5 +37,9 @@ export function CardExpiry(props) {
 }
 
 export function CardRear(props) {
-  return <div>This is the rear side</div>
+  return <div>{props.children}</div>
+}
+
+export function CardSign(props) {
+  return <div className="cardsign common-card"></div>;
 }
