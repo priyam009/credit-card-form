@@ -24,7 +24,7 @@
   left: 50%;
   border-radius: 10px;
   position: absolute;
-  transform: translate(-50%, 0);;
+  transform: translate(-50%, 0);
 }
 
 .card-image {
@@ -55,10 +55,10 @@
 }
 
 .form-data-div-inline {
- display: flex;
- margin-top: 20px;
- flex-direction: row;
- justify-content: space-between;
+  display: flex;
+  margin-top: 20px;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .form-expiry {
@@ -91,4 +91,41 @@
   color: #fff;
   text-shadow: 2px 2px 2px #121212;
   text-align: center;
+}
+
+.cardsign {
+  background-color: #121212;
+  width: 85%;
+  height: 25px;
+  top: 50%;
+  left: 50%;
+}
+
+.flip-enter {
+  transform: rotateY(0deg);
+}
+
+.flip-enter-active {
+  transform: rotateY(180deg);
+  transition: transform 2s;
+}
+
+.flip-exit {
+  transform: rotateY(0deg);
+}
+
+.flip-exit-active {
+  transform: rotateY(180deg);
+  transition: transform 2s;
+}
+
+
+.delay {
+  animation: visible 2s infinite;
+  animation-delay: 2s;
+}
+
+@keyframes visible{
+  from {opacity: 0;}
+  to {opacity: 1;}
 }
